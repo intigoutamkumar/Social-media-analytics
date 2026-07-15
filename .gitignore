@@ -1,0 +1,67 @@
+# Node
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+*.local
+
+# Python
+venv/
+backend/venv/
+__pycache__/
+*.pyc
+*.sqlite3
+db.sqlite3
+backend/db.sqlite3
+.pytest_cache/
+backend/.pytest_cache/
+
+# Environment
+.env
+.env.local
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS
+Thumbs.db
+ehthumbs.db
+
+# Logs
+logs
+*.log
+frontend/vite-dev.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Test coverage
+coverage/
+htmlcov/
+
+# Build outputs
+dist-ssr
+*.local
+
+# Generated reports and local browser caches
+lighthouse-tmp/
+frontend/lh-temp/
+lighthouse_report.json
+lighthouse_preview.json
+frontend/lighthouse-report.json
+frontend/lighthouse-preview.json
+frontend/lighthouse-updated.json
+
+# Django static output
+staticfiles/
+backend/staticfiles/
