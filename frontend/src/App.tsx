@@ -1,10 +1,11 @@
-import { lazy, Suspense } from "react"
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { lazy, Suspense, useEffect } from "react"
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom"
 
 import { ThemeProvider } from "./context/ThemeContext"
 import { NotificationProvider } from "./context/NotificationContext"
 import ErrorBoundary from "./components/ErrorBoundary"
 import ProtectedRoute from "./components/ProtectedRoute"
+import { initSiteAnalytics, trackPageView } from "./utils/siteAnalytics"
 
 const Home = lazy(() => import("./pages/Home"))
 const Login = lazy(() => import("./pages/Login"))
@@ -25,6 +26,20 @@ function PageLoader() {
     )
 }
 
+function AnalyticsTracker() {
+    const location = useLocation()
+
+    useEffect(() => {
+        initSiteAnalytics()
+    }, [])
+
+    useEffect(() => {
+        trackPageView(`${location.pathname}${location.search}`)
+    }, [location.pathname, location.search])
+
+    return null
+}
+
 export default function App() {
 
     return (
@@ -36,6 +51,8 @@ export default function App() {
         <ErrorBoundary>
 
         <BrowserRouter>
+
+            <AnalyticsTracker />
 
             <Suspense fallback={<PageLoader />}>
             <Routes>

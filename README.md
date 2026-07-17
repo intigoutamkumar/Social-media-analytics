@@ -166,6 +166,7 @@ Frontend app: `http://localhost:5173`
 | Variable | Purpose | Local default |
 | --- | --- | --- |
 | `VITE_API_URL` | Backend API base URL | `http://127.0.0.1:8000/api/` |
+| `VITE_GA_MEASUREMENT_ID` | Optional Google Analytics measurement ID for live visitor tracking | Empty |
 
 ## Quality Commands
 
@@ -207,6 +208,7 @@ Recommended portfolio deployment:
 - Database: SQLite for local development, PostgreSQL for production
 - Backend start command: `gunicorn core.wsgi:application --bind 0.0.0.0:$PORT`
 - Frontend build variable: `VITE_API_URL=https://your-backend-domain.com/api/`
+- Optional tracking variable: `VITE_GA_MEASUREMENT_ID=G-XXXXXXXXXX`
 
 ## Portfolio Notes
 
