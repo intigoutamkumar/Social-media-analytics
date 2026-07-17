@@ -867,11 +867,17 @@ button {
         padding:16px 20px !important;
     }
 
+    .home-nav > .fade-in-left{
+        flex:1 1 auto;
+        min-width:0;
+    }
+
     .home-nav-links{
         order:3;
         width:100%;
-        justify-content:space-between;
+        justify-content:center;
         gap:14px !important;
+        padding-top:4px;
     }
 
     .home-nav-actions{
@@ -1152,6 +1158,10 @@ button {
 
     .home-nav-actions{
         width:100%;
+    }
+
+    .home-nav-links{
+        justify-content:space-between;
     }
 
     .home-nav-actions a{

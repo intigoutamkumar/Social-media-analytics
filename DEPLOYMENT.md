@@ -20,8 +20,12 @@ For a clean portfolio setup:
 The root `Procfile` is ready for platforms that detect it:
 
 ```Procfile
-web: gunicorn core.wsgi:application --bind 0.0.0.0:$PORT
+web: cd backend && gunicorn core.wsgi:application --bind 0.0.0.0:$PORT
 ```
+
+If your host lets you set the backend root directory to `backend/`, use
+`gunicorn core.wsgi:application --bind 0.0.0.0:$PORT` as the start command
+instead.
 
 ## Backend Environment
 

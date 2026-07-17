@@ -191,6 +191,7 @@ export default function Home() {
                     {/* Heading */}
                     <h1
                         className="home-hero-title"
+                        aria-label="Track Your Social Growth Intelligently"
                         style={{
                             fontSize: "62px",
                             fontWeight: 800,
@@ -199,15 +200,17 @@ export default function Home() {
                             letterSpacing: "-2px"
                         }}
                     >
-                        Track Your<br />
-                        <span style={{
-                            background: "linear-gradient(90deg,#818cf8,#c084fc,#f472b6)",
-                            WebkitBackgroundClip: "text",
-                            WebkitTextFillColor: "transparent"
-                        }}>
-                            Social Growth
-                        </span><br />
-                        Intelligently
+                        <span aria-hidden="true">
+                            Track Your<br />
+                            <span style={{
+                                background: "linear-gradient(90deg,#818cf8,#c084fc,#f472b6)",
+                                WebkitBackgroundClip: "text",
+                                WebkitTextFillColor: "transparent"
+                            }}>
+                                Social Growth
+                            </span><br />
+                            Intelligently
+                        </span>
                     </h1>
 
                     {/* Sub */}
