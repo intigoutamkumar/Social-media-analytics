@@ -37,8 +37,14 @@ export interface StoredUser {
     email: string
 }
 
+const API_BASE_URL =
+    import.meta.env.VITE_API_URL ||
+    (import.meta.env.PROD
+        ? "https://social-media-analytics-backend-8j3k.onrender.com/api/"
+        : "http://127.0.0.1:8000/api/")
+
 const API: AxiosInstance = axios.create({
-    baseURL: import.meta.env.VITE_API_URL || "http://127.0.0.1:8000/api/",
+    baseURL: API_BASE_URL,
     headers: {
         "Content-Type": "application/json",
     },
