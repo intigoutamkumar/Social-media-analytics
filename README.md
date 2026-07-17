@@ -4,6 +4,11 @@ Social Pulse is a full-stack social media analytics dashboard built for portfoli
 
 The project uses deterministic demo data so recruiters can review the product experience immediately without OAuth setup, social media API keys, or paid platform access.
 
+## Live Demo
+
+- Frontend: https://social-media-analytics-umber.vercel.app
+- Backend API: https://social-media-analytics-backend-8j3k.onrender.com/api/
+
 ![Social Pulse home page](docs/screenshots/01-home.png)
 
 ![React](https://img.shields.io/badge/React-19.x-61dafb?logo=react)
@@ -203,8 +208,8 @@ See [DEPLOYMENT.md](DEPLOYMENT.md) for production environment variables and host
 
 Recommended portfolio deployment:
 
-- Frontend: Vercel or Netlify
-- Backend: Render, Railway, Fly.io, or another Python host
+- Frontend: https://social-media-analytics-umber.vercel.app
+- Backend: https://social-media-analytics-backend-8j3k.onrender.com
 - Database: SQLite for local development, PostgreSQL for production
 - Backend start command: `gunicorn core.wsgi:application --bind 0.0.0.0:$PORT`
 - Frontend build variable: `VITE_API_URL=https://your-backend-domain.com/api/`
